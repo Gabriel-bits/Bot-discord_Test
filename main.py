@@ -7,7 +7,6 @@ import asyncio
 
 bot = discord.Client()
 
-
 @bot.event
 async def on_ready():
     print("Bot on")
@@ -16,7 +15,7 @@ async def on_ready():
     game = discord.Game("peças fora")
     loopcanal.start()
     await bot.change_presence(status=discord.Status.idle, activity=game)
-  
+
 
 @tasks.loop(minutes=5)
 async def loopcanal():
@@ -26,4 +25,5 @@ async def loopcanal():
 
 
 if __name__ == "__main__":
+    
     bot.run(Secret)
