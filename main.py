@@ -20,7 +20,7 @@ async def on_ready():
 @tasks.loop(minutes=5)
 async def loopcanal():
     dia_horas = datetime.datetime.now()
-    canal = bot.get_channel(id=822475632855220224) #<-- id do canal que vei mandar as messg
+    canal = bot.get_channel(id=826089258375708702) #<-- id do canal que vei mandar as messg
     await canal.send(f"** `{dia_horas.day}`d | `{dia_horas.hour}`h :`{dia_horas.minute}`m **")
 
 
