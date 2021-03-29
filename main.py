@@ -17,7 +17,7 @@ async def on_ready():
     await bot.change_presence(status=discord.Status.idle, activity=game)
 
 
-@tasks.loop(minutes=5)
+@tasks.loop(minutes=1)
 async def loopcanal():
     dia_horas = datetime.datetime.now()
     canal = bot.get_channel(id=826089258375708702) #<-- id do canal que vei mandar as messg
